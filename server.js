@@ -16,6 +16,8 @@ const initTables = require("./functions/tables");
 const historyRoutes = require("./routes/history");
 const favoriteRoutes = require("./routes/favorite");
 
+const removeDuplicateHistory = require("./functions/duplicateDelete");
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -34,6 +36,9 @@ app.use(routes);
 app.use("/api/player", playerRoute);
 
 initTables();
+
+// Start duplicate cleaner
+removeDuplicateHistory(); // starts interval internally
 
 app.use("/api/history", historyRoutes);
 app.use("/api/favorite", favoriteRoutes)
