@@ -145,4 +145,5 @@ node server.js
 * Adjust CORS settings if you deploy frontend and backend to different domains.
 
 
-git init && git add -A && git commit -m "first commit" &&git branch -M main && git remote add origin https://github.com/Giveth2024/giveth-station-backend.git && git push -u origin main
+git init && git add -A && git commit -m "first commit" &&
+git branch -M main && git remote add origin https://github.com/Giveth2024/giveth-station-backend.git && git push -u origin main
